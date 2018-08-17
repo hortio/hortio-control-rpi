@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:wheezy
+FROM resin/rpi-raspbian:latest
 LABEL maintainer="Sergei Silnov <po@kumekay.com>"
 
 RUN apt-get update && apt-get install -y \
