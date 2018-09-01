@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 adafruit-gpio = "*"
 "smbus2" = "*"
+"rpi.gpio" = "*"
 
 [dev-packages]
 
