@@ -4,11 +4,15 @@ LABEL maintainer="Sergei Silnov <po@kumekay.com>"
 RUN apt-get update && apt-get install -y \
     python \
     python-pip \
-    python-smbus \
     --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
-COPY control/ /app
+RUN pip install pipenv
+
+COPY / /app
+WORKDIR /app
+
+RUN pipenv install
 
 # Define default command
-CMD ["python", "/app/core.py"] 
+CMD ["pipenv", "run", "python", "/app/control/core.py"] 
