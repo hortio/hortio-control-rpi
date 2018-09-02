@@ -1,2 +1,1 @@
-# hortio-control-rpi
-Python control software to run on RPI
+Moved to https://github.com/hortio/hortio-resin/tree/vdnh
